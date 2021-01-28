@@ -1,0 +1,21 @@
+{% extends "admin_perpus/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block headCrud%}
+    <h1 class="display-4">Perpustakaan Uhamka </h1>
+    <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
+    <hr class="my-4">
+{% endblock %}
+
+{% block content %}
+    <div style="display: flex; flex-direction: column;">
+        <button type="" class="btn btn-success" >
+            <a href="{% url 'admin_perpus:formCrudCatalog' %}" style="color: white;">Catalog</a></button>
+        <button type="" class="btn btn-success ">
+            <a href="{% url 'admin_perpus:formCrudJurnal' %}" style="color: white;">Journal</a></button>
+        <button type="" class="btn btn-success ">
+            <a href="{% url 'admin_perpus:formCrudRepository' %}" style="color: white;">Repository</a></button>
+    </div>
+
+
+{% endblock content %}

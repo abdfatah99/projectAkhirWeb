@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+<div class="py-4"></div>
+<section class="profil-library py-5" style="background-color: #fff;">
+    <div class="container min-vh-100">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-md-12 text-center">
+                <h1 class="display-5 text-center fw-bold" style="font-size: 2.5rem; color: navy;">Peminjaman/Pengembalian Buku</h1>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-12">
+                <p><b>Cara Peminjaman Buku :</b></p>
+                <ul>
+                <li type="square">Cari buku yang ingin dipinjam melalui OPAC (Online Catalog)</li>
+                <li type="square">Catat nomor panggilan yang ada pada katalog</li>
+                <li type="suqare">Cari nomor yang telah dicatat pada rak buku</li>
+                <li type="square">Bawa buku yang telah ditemukan ke petugas perpustakaan dan tunjukan kartu tanda anggota perpustakaan (KTAP)</li>
+                <li type="square">Tunggu sampai proses peminjaman selesai</li>
+                <br>
+                </ul>
+                <p><b>Aturan Peminjaman Buku :</b></p>
+                <ul>
+                <li type="square">Buku yang dipinjam maksimal 3 buku</li>
+                <li type="square">Masa pinjam buku teks 10 hari, buku tandon 1 hari</li>
+                <li type="square">Buku referensi hanya boleh dibaca di tempat</li>
+                <li type="square">Koleksi buku yang dipinjam hanya koleksi buku teks dan buku tandon</li>
+                </ul>
+                <p><b>Cara Pengembalian Buku :</b></p>
+                <p>Letakan buku pada meja petugas, lalu mengisi buku tamu dan menulis judul buku yang ingin dikembalikan</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contents %}
+    

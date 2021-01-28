@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+<div class="py-4"></div>
+<section class="journal py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-md-4 text-center text-md-left">
+                <h2 class="fw-bold" style="color: #004B84;">
+                    <a href="#"></a>
+                    REPOSITORY
+                </h2>
+                <p>Daftar Repository yang tersedia di Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+            <div class="col-md-8">
+                <h3>{{repository.judul}}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid" style="background: #004B84!important;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 my-5">
+                <table class="table text-white">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Judul</th>
+                        <td>:</td>
+                        <td>{{repository.judul}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Penulis</th>
+                        <td>:</td>
+                        <td>{{repository.penulis}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Abstraksi</th>
+                        <td>:</td>
+                        <td>{{repository.abstraksi}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Keyword</th>
+                        <td>:</td>
+                        <td>{{repository.keyword}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Pembimbing</th>
+                        <td>:</td>
+                        <td>{{repository.pembimbing}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Jenis Penulisan</th>
+                        <td>:</td>
+                        <td>{{repository.jenis_penulisan}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Lokasi</th>
+                        <td>:</td>
+                        <td>{{repository.lokasi}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contents %}
+    

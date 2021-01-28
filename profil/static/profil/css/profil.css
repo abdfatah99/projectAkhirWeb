@@ -1,0 +1,23 @@
+.min-vh-100 {
+    min-height: 100vh !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profil-libary {
+    background-color: grey;
+}

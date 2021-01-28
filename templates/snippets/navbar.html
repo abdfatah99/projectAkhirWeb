@@ -1,0 +1,84 @@
+{% load static %}
+
+<style>
+  .bg-light {
+    background-color: #fff !important;
+  }
+
+  .nav-link {
+    color: #004B84!important;
+    border-bottom: 0.5px solid transparent !important;
+  }
+
+  .nav-link:hover {
+    border-bottom: 0.5px solid #004B84!important;
+  }
+
+  .navbar-nav {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .dropdown-menu {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  .dropdown-item {
+    color: #004B84!important;
+    background-color: transparent;
+    border-bottom: 0.5px solid transparent !important;
+  }
+
+  .dropdown-item:hover {
+    border-bottom: 0.5px solid #004B84!important;
+    background: transparent;
+  }
+  
+</style>
+
+<nav class="navbar fixed-top fixed-effect navbar-expand-lg navbar-light bg-light shadow">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/uhamka.png'%}" alt="logo uhamka" style="height: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profil
+            </a>
+            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'profil:profil-perpustakaan' %}">Profil Perpustakaan</a></li>
+              <li><a class="dropdown-item" href="{% url 'profil:layanan-perpustakaan' %}">Layanan Perpustakaan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Layanan
+            </a>
+            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'layanan:journal' %}">Journal</a></li>
+              <li><a class="dropdown-item" href="{% url 'layanan:repository' %}">Repository</a></li>
+              <li><a class="dropdown-item" href="{% url 'layanan:catalog' %}">Catalog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Petunjuk
+            </a>
+            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'petunjuk:petunjuk-perpustakaan' %}">Petunjuk Perpustakaan</a></li>
+              <li><a class="dropdown-item" href="{% url 'petunjuk:peminjaman-buku' %}">Peminjaman/Pengembalian Buku</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'admin_perpus:login' %}"><i class="fa fa-sign-in-alt"></i> Login</a>
+          </li>
+      </div>
+    </div>
+  </nav>

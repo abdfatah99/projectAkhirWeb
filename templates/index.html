@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+<section class="home pt-4">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('/static/img/perpustakaan.jpg');">
+            <div class="container text-white">
+                <h2 class="display-3 fw-bold">Perpustakaan</h2>
+                <p class="lead fw-bold">Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('/static/img/perpus.jpg');">
+            <div class="container">
+                <h2 class="display-3 fw-bold">Perpustakaan</h2>
+                <p class="lead fw-bold">Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('/static/img/book.jpg');">
+            <div class="container">
+                <h2 class="display-3 fw-bold">Perpustakaan</h2>
+                <p class="lead fw-bold">Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+          </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+</section>
+
+<section class="quotes-page">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-sm-12">
+                <h2 class="fw-bold text-center">
+                    “Siapapun yang terhibur dengan buku-buku, kebahagiaan tak akan sirna dari dirinya.”
+                </h2>
+                <p class="lead fw-bold text-center pt-4">-Ali bin Abi Thalib-</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-content py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center py-5 mt-5">
+            <div class="col-md-4 mb-4 px-4">
+                <h2 class="fw-bold">Informasi Layanan Pustaka Untuk Anda</h2>
+                <p class="text-muted">Layanan yang tersedia di perpustakaan Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+            <div class="col-md-8 mb-4">
+                <div class="card-group text-center">
+                    <div class="card mb-5 mx-2 shadow-sm rounded-2">
+                      <img src="{% static 'img/book.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-title fs-5">Jurnal Ilmiah</p>
+                        <a href="{% url 'layanan:journal' %}" title="Jurnal Ilmiah" class="stretched-link"></a>
+                      </div>
+                    </div>
+                    <div class="card mb-5 mx-2 shadow-sm rounded-2">
+                      <img src="{% static 'img/perpus.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-title fs-5">Skripsi,Tesis,Disertasi</p>
+                        <a href="{% url 'layanan:repository' %}" title="Skripsi,Penelitian,Tesis,Disertasi" class="stretched-link"></a>
+                      </div>
+                    </div>
+                    <div class="card mb-5 mx-2 shadow-sm rounded-2">
+                      <img src="{% static 'img/perpustakaan.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-title fs-5">Katalog Buku</p>
+                        <a href="{% url 'layanan:catalog' %}" title="Katalog Buku" class="stretched-link"></a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact py-5" id="particles-js">
+    <div class="container-fluid container contact-content position-absolute">
+        <div class="row justify-content-center align-items-center text-white py-5 mt-5">
+            <div class="col-sm-4 col-md-4 mb-5">
+                <h5 class="fs-4"><i class="fa fa-clock"></i> Jam Buka</h5>
+                <p class="pt-3">Senin - Jumat : 08.00 - 20.00 WIB <br>
+                    Sabtu : 08.00 - 15.00 WIB <br>
+                    Minggu dan Hari Libur Nasional :
+                    Tutup</p>
+                
+            </div>
+            <div class="col-sm-4 col-md-4 mb-5">
+                <h5 class="fs-4"><i class="fa fa-home"></i> Alamat</h5>
+                <p class="pt-3">UPT Perpustakaan UHAMKA <br>
+                    Kampus A <br>
+                    Jl. Limau II Kebayoran Baru,
+                    Jakarta Selatan 12130</p>
+            </div>
+            <div class="col-sm-4 col-md-4 mb-5">
+                <h5 class="fs-4"><i class="fa fa-envelope"></i> Kontak</h5>
+                <p class="pt-3">Telepon : (021) 7208177, 7222886 <br>
+                    Fax : (021) 7261226 <br>
+                    Email Perpustakaan :
+                    lib_uhamka@yahoo.com <br>
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="py-4">
+    <section class="library-faculty bg-light">
+        <div class="container py-5">
+            <div class="row justify-content-center align-items-center py-5">
+                <div class="col-sm-4 col-md-4">
+                    <h2 class="display-4 fw-bold">Perpustakaan Fakultas</h2>
+                    <p class="lead">Daftar Perpustakaan Universitas Muhammadiyah Prof.Dr.Hamka</p>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="list-group list-group-flush">
+                        <a href="http://lib.uhamka.ac.id/ft" class="list-group-item">Perpustakaan FT</a>
+                        <a href="http://lib.uhamka.ac.id/fkip" class="list-group-item">Perpustakaan FKIP</a>
+                        <a href="http://lib.uhamka.ac.id/fk" class="list-group-item">Perpustakaan FK</a>
+                        <a href="http://lib.uhamka.ac.id/feb" class="list-group-item">Perpustakaan FEB</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="list-group list-group-flush">
+                        <a href="http://lib.uhamka.ac.id/ffs" class="list-group-item">Perpustakaan FFS</a>
+                        <a href="http://lib.uhamka.ac.id/fikes" class="list-group-item">Perpustakaan FIKES</a>
+                        <a href="#" class="list-group-item">Perpustakaan FISIP</a>
+                        <a href="http://lib.uhamka.ac.id/sps" class="list-group-item">Perpustakaan Pascasarjana</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock contents %}
+    

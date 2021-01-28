@@ -1,0 +1,56 @@
+{% extends "admin_perpus/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block headCrud%}
+    <h1 class="display-4">Jurnal</h1>
+    <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
+    <hr class="my-4">
+{% endblock %}
+
+{% block content %}
+
+<!-- action = kalau submitnya diclick, datanya mau disimpen kemana?
+     action -> - ngga diisi, maka datanya akan disimpan di url tersebut
+     action -> kalau diisi, maka datanya akan disimpan di url tujuan -->
+     
+<form action="" method="POST" autocomplete="off">
+    {% csrf_token %}
+
+    {{form.judul_artikel | as_crispy_field}}
+
+    {{form.judul_terbitan | as_crispy_field}}
+   
+    {{form.issn | as_crispy_field}}
+   
+    {{form.bahasa | as_crispy_field}}
+    
+    {{form.tempat_terbit | as_crispy_field}}
+    
+    {{form.tahun | as_crispy_field}}
+
+    {{form.volume | as_crispy_field}}
+    
+    {{form.penerbit | as_crispy_field}}
+
+    {{form.frekuensi_penerbitan | as_crispy_field}}
+
+    {{form.penulis | as_crispy_field}}
+    
+    {{form.abstaksi | as_crispy_field}}
+   
+    {{form.kata_kunci | as_crispy_field}}
+    
+    {{form.lokasi | as_crispy_field}}
+    
+    {{form.terakreditasi | as_crispy_field}}
+    
+    {{form.slug | as_crispy_field}}
+    
+    <div style="display: flex; flex-direction: column;">
+        <button type="submit" class="btn btn-success"><i class="fas fa-database"></i> Submit</button>
+        <button type="" class="btn btn-success" >
+            <a href="{% url 'admin_perpus:pilihanCrud' %}" style="color: white;">Kembali</a></button>
+    </div>
+
+</form>
+{% endblock content %}

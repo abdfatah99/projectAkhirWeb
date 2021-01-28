@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+<div class="py-4"></div>
+<section class="journal py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-md-4 text-center text-md-left">
+                <h2 class="fw-bold" style="color: #004B84;">
+                    <a href="#"></a>
+                    JOURNAL
+                </h2>
+                <p>Daftar Journal yang tersedia di Universitas Muhammadiyah Prof.Dr.Hamka</p>
+            </div>
+            <div class="col-md-8">
+                <h3>{{journal.judul_artikel}}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid" style="background: #004B84!important;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 my-5">
+                <table class="table text-white">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Judul Artikel</th>
+                        <td>:</td>
+                        <td>{{journal.judul_artikel}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Judul Terbitan</th>
+                        <td>:</td>
+                        <td>{{journal.judul_terbitan}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">ISSN</th>
+                        <td>:</td>
+                        <td>{{journal.issn}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Bahasa</th>
+                        <td>:</td>
+                        <td>{{journal.bahasa}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tempat Terbit</th>
+                        <td>:</td>
+                        <td>{{journal.tempat_terbit}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tahun</th>
+                        <td>:</td>
+                        <td>{{journal.tahun}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Volume</th>
+                        <td>:</td>
+                        <td>{{journal.volume}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Penerbit</th>
+                        <td>:</td>
+                        <td>{{journal.penerbit}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Frekuensi Penerbitan</th>
+                        <td>:</td>
+                        <td>{{journal.frekuensi_penerbitan}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Penulis</th>
+                        <td>:</td>
+                        <td>{{journal.penulis}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Abstraksi</th>
+                        <td>:</td>
+                        <td>{{journal.abstraksi}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Kata Kunci</th>
+                        <td>:</td>
+                        <td>{{journal.kata_kunci}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Lokasi</th>
+                        <td>:</td>
+                        <td>{{journal.lokasi}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Terakreditasi</th>
+                        <td>:</td>
+                        <td>{{journal.terakreditasi}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contents %}
+    

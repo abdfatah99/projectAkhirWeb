@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'profil/css/profil.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+    {% include 'snippets/styles.html' %}
+
+    {% block title %}
+    <link rel="icon" href="{% static 'img/logo uhamka.png' %}">
+    <title>{{title}}</title>
+    {% endblock title %}
+        
+</head>
+<body>
+    
+    {% block header %}
+        {% include 'snippets/navbar.html' %}
+    {% endblock header %}
+
+    
+    {% block contents %}
+        
+    {% endblock contents %}
+        
+    
+    {% block footer %}
+        <section class="footer-link py-4">
+            <div class="container py-5">
+                <div class="row justify-content-center align-items-center py-5 mt-5">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="fw-bold text-dark text-center mb-3 pb-3">
+                            UHAMKA Direktori
+                        </h5>
+                        <div class="list-group list-group-flush">
+                            <a href="https://uhamka.ac.id/" class="list-group-item">Univ. Muhammadiyah Prof.Dr.Hamka</a>
+                            <a href="http://akademik.uhamka.ac.id/" class="list-group-item">Sistem Akademik UHAMKA</a>
+                            <a href="https://muhammadiyah.or.id/" class="list-group-item">Persyarikatan Muhammadiyah</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="fw-bold text-dark text-center mb-3 pb-3">
+                            Komunitas UHAMKA
+                        </h5>
+                        <div class="list-group list-group-flush">
+                            <a href="https://bpti.uhamka.ac.id/" class="list-group-item">BPTI UHAMKA</a>
+                            <a href="https://pk2m.uhamka.ac.id/" class="list-group-item">PK2M UHAMKA</a>
+                            <a href="https://pn.uhamka.ac.id/" class="list-group-item">Pusat Neurosains</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="fw-bold text-dark text-center mb-3 pb-3">
+                            E-Journal Source
+                        </h5>
+                        <div class="list-group list-group-flush">
+                            <a href="https://scholar.google.com/" class="list-group-item">Google Scholar</a>
+                            <a href="https://www.researchgate.net/" class="list-group-item">Research gate</a>
+                            <a href="https://www.academia.edu/" class="list-group-item">Academia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid ui-footer">
+            <div class="container py-3">
+                <div class="row text-center text-white">
+                    <div class="col-md-12">
+                        <p>Copyright 2020 Perpustakaan UHAMKA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock footer %}
+    
+    {% include 'snippets/scripts.html' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</body>
+</html>
