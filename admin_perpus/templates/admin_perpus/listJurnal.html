@@ -1,0 +1,48 @@
+{% extends "admin_perpus/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block headCrud%}
+    <h1 class="display-4">Journal List</h1>
+    <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
+    <p>nama mehtod {{namaMethod}}</p>
+    <hr class="my-4">
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>issn</td>
+            <td>judul</td>
+            <td>penulis</td>
+            <td>
+                <a href="{% url 'formCrudJurnal' %}" class="btn text-secondary px-0">
+                    <i class="fas fa-plus"></i> Add New
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for jurnal in jurnalList %}
+            <tr>
+                <td>{{jurnal.issn}}</td>
+                <td>{{jurnal.judul}}</td>
+                <td>{{jurnal.penulis}}</td>
+                <td>
+                    <a href="{% url 'formCrudJurnalUpdate' jurnal.id %}" class="btn text-secondary px-0">
+                        <i class="far fa-edit fa-lg"></i>
+                    </a>
+                    <form action="{% url 'jurnalDelete' jurnal.id %}" method="POST" class="d-inline">
+                        {% csrf_token %}
+                        <button class="btn">
+                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                        </button>
+
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

@@ -4,6 +4,7 @@
 {% block headCrud%}
     <h1 class="display-4">Jurnal</h1>
     <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
+    <p>nama mehtod {{namaMethod}}</p>
     <hr class="my-4">
 {% endblock %}
 
@@ -16,7 +17,7 @@
 <form action="" method="POST" autocomplete="off">
     {% csrf_token %}
 
-    {{form.judul_artikel | as_crispy_field}}
+    {{form.judul_artikel  | as_crispy_field}}
 
     {{form.judul_terbitan | as_crispy_field}}
    
@@ -30,24 +31,31 @@
 
     {{form.volume | as_crispy_field}}
     
-    {{form.penerbit | as_crispy_field}}
+    {{form.penerbit | as_crispy_field }}
 
     {{form.frekuensi_penerbitan | as_crispy_field}}
 
     {{form.penulis | as_crispy_field}}
     
-    {{form.abstaksi | as_crispy_field}}
+    <!-- {{form.abstaksi }}
    
-    {{form.kata_kunci | as_crispy_field}}
+    {{form.kata_kunci }}
     
-    {{form.lokasi | as_crispy_field}}
+    {{form.lokasi }}
     
-    {{form.terakreditasi | as_crispy_field}}
+    {{form.terakreditasi }}
     
-    {{form.slug | as_crispy_field}}
-    
+    {{form.slug }}
+     -->
     <div style="display: flex; flex-direction: column;">
-        <button type="submit" class="btn btn-success"><i class="fas fa-database"></i> Submit</button>
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success" style="margin: 10px;"><i class="fas fa-database" ></i> Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'jurnalList' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a>
+        </div>
         <button type="" class="btn btn-success" >
             <a href="{% url 'admin_perpus:pilihanCrud' %}" style="color: white;">Kembali</a></button>
     </div>

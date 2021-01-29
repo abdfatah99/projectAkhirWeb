@@ -57,7 +57,14 @@
        
   
     <div style="display: flex; flex-direction: column;">
-        <button type="submit" class="btn btn-success"><i class="fas fa-database"></i> Submit</button>
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success" style="margin: 10px;"><i class="fas fa-database" ></i> Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'repositoryList' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a>
+        </div>
         <button type="" class="btn btn-success" >
             <a href="{% url 'admin_perpus:pilihanCrud' %}" style="color: white;">Kembali</a></button>
     </div>

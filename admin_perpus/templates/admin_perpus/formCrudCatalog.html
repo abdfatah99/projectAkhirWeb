@@ -4,6 +4,7 @@
 {% block headCrud%}
     <h1 class="display-4">Catalog</h1>
     <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
+    <p>nama method {{namaMethod}}</p>
     <hr class="my-4">
 {% endblock %}
 
@@ -31,7 +32,14 @@
     {{form.bahasa | as_crispy_field}}
        
     <div style="display: flex; flex-direction: column;">
-        <button type="submit" class="btn btn-success" style="margin: 10px;"><i class="fas fa-database" ></i> Submit</button>
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success" style="margin: 10px;"><i class="fas fa-database" ></i> Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'catalogList' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a>
+        </div>
         <button type="" class="btn btn-success" style="margin: 10px;">
             <a href="{% url 'admin_perpus:pilihanCrud' %}" style="color: white;">Kembali</a></button>
     </div>

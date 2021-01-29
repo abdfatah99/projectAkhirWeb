@@ -7,10 +7,6 @@ class formCatalog(forms.ModelForm):
         model = catalog
         fields = '__all__'  
     
-    widget = {
-        'judul': forms.TextInput({'class': 'form-control'})
-    }
-    
     def __init__(self, *args, **kwargs):
         super(formCatalog,self).__init__(*args, **kwargs)
         self.fields['bahasa'].empty_label = "Select"

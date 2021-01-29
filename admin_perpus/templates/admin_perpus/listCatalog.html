@@ -4,20 +4,11 @@
 {% block headCrud%}
     <h1 class="display-4">Catalog List</h1>
     <p class="lead font-italic">Laman khusus Admin Perpustakaan Uhamka</p>
-    <p>welcome: {{kata}}</p>
-    <p>kartu ucapan: {{kartu_ucapan}}</p>
-    {% if pesan %}
-        <p>isi dari database {{pesan}}</p>
-    {% endif %}
-
+    <p>welcome: {{greeting}}</p>
     <hr class="my-4">
 {% endblock %}
 
 {% block content %}
-
-{% if pesan %}
-    <p>isi dari database {{pesan}}</p>
-{% endif %}
 
 <table class="table table-borderless">
     <thead class="border-bottom font-weight-bold">
@@ -25,7 +16,10 @@
             <td>keyword</td>
             <td>judul</td>
             <td>penulis</td>
-            <td></td>
+            <td>
+                <a href="{% url 'formCrudCatalog' %}" class="btn text-secondary px-0">
+                    <i class="fas fa-plus"></i> Add New
+            </td>
         </tr>
     </thead>
     <tbody>
@@ -35,9 +29,16 @@
                 <td>{{katalog.judul}}</td>
                 <td>{{katalog.penulis}}</td>
                 <td>
-                    <a href="{% url 'formCrudCatalogUpdate' formCrudCatalog.id %}" class="btn text-secondary px-0">
+                    <a href="{% url 'formCrudCatalogUpdate' katalog.id %}" class="btn text-secondary px-0">
                         <i class="far fa-edit fa-lg"></i>
                     </a>
+                    <form action="{% url 'catalogDelete' katalog.id %}" method="POST" class="d-inline">
+                        {% csrf_token %}
+                        <button class="btn">
+                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                        </button>
+
+                    </form>
                 </td>
             </tr>
         {% endfor %}
