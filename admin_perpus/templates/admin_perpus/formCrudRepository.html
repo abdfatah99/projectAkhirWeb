@@ -15,40 +15,20 @@
      
 <form action="" method="POST" autocomplete="off">
     {% csrf_token %}
-    <div class="form-group input-group my-3">
-        <label for="">Judul Artikel : {{form.judul}} </label>
-    </div>
-    
 
-    <div class="form-group input-group my-3">
-        <label for="">Penulis  : {{form.penulis}} </label>
-    </div>
-    
-   
-    <div class="form-group input-group my-3">
-        <label for="">Abstaksi  : {{form.abstraksi}} </label>
-    </div>
-    
-   
-    <div class="form-group input-group my-3">
-        <label for="">Keyword : {{form.keyword}} </label>
-    </div>
-    
-    
-    <div class="form-group input-group my-3">
-        <label for="">Pembimbing : {{form.pembimbing}} </label>
-    </div>
-    
-    
-    <div class="form-group input-group my-3">
-        <label for="">Jenis Penulisan : {{form.jenis_penulisan}} </label>
-    </div>
-    
+    {{form.judul | as_crispy_field}}
 
-    <div class="form-group input-group my-3">
-        <label for="">Lokasi : {{form.lokasi}} </label>
-    </div>
+    {{form.penulis | as_crispy_field}}
     
+    {{form.abstraksi | as_crispy_field}}
+   
+    {{form.keyword | as_crispy_field}} 
+    
+    {{form.pembimbing | as_crispy_field}} 
+    
+    {{form.jenis_penulisan | as_crispy_field}} 
+
+    {{form.lokasi | as_crispy_field}}
 
     <!-- <div class="form-group input-group my-3">
         <label for="">Judul Artikel : {{form.slug}} </label>
